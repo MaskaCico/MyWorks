@@ -1,0 +1,24 @@
+<div class="container justify-content-center">
+  <div class="row text-center py-5">
+    <div class="row">
+      <p>
+        <i
+          >Ezen az oldalon az Angular szülő-gyerek kapcsolatot láthatjuk a
+          gyakorlatban.</i
+        >
+      </p>
+    </div>
+    <div class="col text-center py-5">
+      <app-warrior (clickEvent)="setChosenClass($event)"></app-warrior>
+      <app-archer (clickEvent)="setChosenClass($event)"></app-archer>
+      <app-mage (clickEvent)="setChosenClass($event)"></app-mage>
+      <app-rogue (clickEvent)="setChosenClass($event)"></app-rogue>
+    </div>
+    <h2>{{ classChooser }}</h2>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <img [src]="imgURL" alt="" class="img-fluid w-50 mb-5" />
+    </div>
+  </div>
+</div>
