@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --primary-color: #2a84ce; /* Green */
-  --secondary-color: #1d2e8d; /* Red */
-  --background-color: #f0f0f0; /* Light Gray */
-  --text-color: #ffffff; /* Dark Gray */
-  --shadow-dark: rgba(0, 0, 0, 0.2); /* Dark Shadow */
-  --shadow-light: rgba(255, 255, 255, 0.1); /* Light Shadow */
+  --primary-color: #2a84ce;
+  --secondary-color: #6185c7;
+  --background-color: #f0f0f0;
+  --text-color: #ffffff;
+  --shadow-dark: rgba(0, 0, 0, 0.2);
+  --shadow-light: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -50,6 +50,18 @@ body {
   height: 100%;
 }
 
+.secondary-data {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
 .weather-info {
   position: relative;
   z-index: 1;
@@ -75,4 +87,49 @@ body {
   font-weight: 900;
 }
 
-.more;
+.details-label {
+  color: var(--text-color);
+}
+
+.details-container {
+  flex: 1;
+  background-color: var(--shadow-light);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info-block {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.info-block-label {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-block-label img {
+  width: 1.5em;
+}
+
+.info-block-label span {
+  color: var(--text-color);
+  font-size: 0.8em;
+}
+
+.info-block-value {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--text-color);
+}
