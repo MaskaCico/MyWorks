@@ -1,20 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { WeatherService } from './services/weather.service';
-import { Weather } from './models/weather';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  weatherData?: Weather;
+export class AppComponent {
+  title = 'Angular-Weather-API'; 
 
-  constructor(private weatherService: WeatherService) {}
+
+  constructor() {}
 
   ngOnInit(): void {
-    this.weatherService.getWeather().subscribe({
-      next: (data) => (this.weatherData = data),
-      error: (err) => console.error('API hiba:', err),
-    });
+
   }
 }

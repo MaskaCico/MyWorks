@@ -1,13 +1,11 @@
-<div class="container" *ngIf="weatherData">
+<div class="container">
   <div class="primary-data">
     <img src="assets/daytime.jpg" alt="day" />
     <img src="assets/nighttime.jpg" alt="night" />
 
     <div class="weather-info">
-      <div class="location">{{ weatherData.name }}</div>
-      <div class="temperature">
-        {{ weatherData.main.temp | number : "1.0-0" }}°C
-      </div>
+      <div class="location">Budapest</div>
+      <div class="temperature">{{ 16.6 | number : "1.0-0" }}°C</div>
     </div>
   </div>
 
@@ -19,34 +17,28 @@
           <img src="assets/coldtemp.svg" alt="" />
           <span>Min</span>
         </div>
-        <div class="info-block-value">
-          {{ weatherData.main.temp_min | number : "1.0-0" }}°C
-        </div>
+        <div class="info-block-value">13°C</div>
       </div>
       <div class="info-block">
         <div class="info-block-label">
           <img src="assets/hottemp.svg" alt="" />
           <span>Max</span>
         </div>
-        <div class="info-block-value">
-          {{ weatherData.main.temp_max | number : "1.0-0" }}°C
-        </div>
+        <div class="info-block-value">22°C</div>
       </div>
       <div class="info-block">
         <div class="info-block-label">
           <img src="assets/humidity.svg" alt="" />
           <span>Humidity</span>
         </div>
-        <div class="info-block-value">{{ weatherData.main.humidity }}%</div>
+        <div class="info-block-value">77%</div>
       </div>
       <div class="info-block">
         <div class="info-block-label">
           <img src="assets/wind.svg" alt="" />
           <span>Wind speed</span>
         </div>
-        <div class="info-block-value">
-          {{ weatherData.wind.speed * 3.6 | number : "1.0-0" }} km/h
-        </div>
+        <div class="info-block-value">7 km/h</div>
       </div>
     </div>
   </div>

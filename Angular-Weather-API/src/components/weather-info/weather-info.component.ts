@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Weather } from '../../app/models/weather';
-import { WeatherService } from '../../app/services/weather.service';
 
 @Component({
   selector: 'app-weather-info',
@@ -8,14 +6,9 @@ import { WeatherService } from '../../app/services/weather.service';
   styleUrls: ['./weather-info.component.css'],
 })
 export class WeatherInfoComponent implements OnInit {
-  weatherData?: Weather;
+  title = 'Ez egy példa komponens';
 
-  constructor(private weatherService: WeatherService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.weatherService.getWeather().subscribe({
-      next: (data) => (this.weatherData = data),
-      error: (err) => console.error('API hiba:', err),
-    });
-  }
+  ngOnInit(): void {}
 }
