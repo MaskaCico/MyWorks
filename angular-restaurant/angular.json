@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-restaurant": {
+    "Angular-Restaurant": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -66,10 +66,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-restaurant:build:production"
+              "buildTarget": "Angular-Restaurant:build:production"
             },
             "development": {
-              "buildTarget": "angular-restaurant:build:development"
+              "buildTarget": "Angular-Restaurant:build:development"
             }
           },
           "defaultConfiguration": "development"
