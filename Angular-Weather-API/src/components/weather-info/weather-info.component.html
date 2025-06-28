@@ -1,44 +1,81 @@
 <div class="container">
   <div class="primary-data">
-    <img src="assets/daytime.jpg" alt="day" />
-    <img src="assets/nighttime.jpg" alt="night" />
+    <div class="city-input-overlay">
+      <input
+        type="text"
+        [(ngModel)]="city"
+        (keyup.enter)="fetchWeather()"
+        placeholder="Enter city name..."
+      />
+      <button (click)="fetchWeather()">Search</button>
+    </div>
+    <span class="error-msg" *ngIf="errorMsg">{{ errorMsg }}</span>
+    <img *ngIf="isDaytime" src="assets/daytime.jpg" alt="day" />
+    <img *ngIf="!isDaytime" src="assets/nighttime.jpg" alt="night" />
+    <div class="city-clock" *ngIf="localTime">
+      {{ localTime }}
+    </div>
 
-    <div class="weather-info">
-      <div class="location">Budapest</div>
-      <div class="temperature">{{ 16.6 | number : "1.0-0" }}°C</div>
+    <div class="weather-info" *ngIf="weather && !errorMsg">
+      <div class="location">{{ weather.location.name }}</div>
+      <div class="temperature">
+        {{ weather.current.temp_c | number : "1.0-0" }}°C
+      </div>
     </div>
   </div>
 
-  <div class="secondary-data">
+  <div class="secondary-data" *ngIf="weather && !errorMsg">
     <div class="details-label">Details</div>
     <div class="details-container">
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="assets/coldtemp.svg" alt="" />
-          <span>Min</span>
-        </div>
-        <div class="info-block-value">13°C</div>
-      </div>
-      <div class="info-block">
-        <div class="info-block-label">
-          <img src="assets/hottemp.svg" alt="" />
-          <span>Max</span>
-        </div>
-        <div class="info-block-value">22°C</div>
-      </div>
       <div class="info-block">
         <div class="info-block-label">
           <img src="assets/humidity.svg" alt="" />
           <span>Humidity</span>
         </div>
-        <div class="info-block-value">77%</div>
+        <div class="info-block-value">{{ weather.current.humidity }}%</div>
       </div>
       <div class="info-block">
         <div class="info-block-label">
           <img src="assets/wind.svg" alt="" />
           <span>Wind speed</span>
         </div>
-        <div class="info-block-value">7 km/h</div>
+        <div class="info-block-value">{{ weather.current.wind_kph }} km/h</div>
+      </div>
+      <div
+        class="info-block"
+        *ngIf="
+          weather.forecast &&
+          weather.forecast.forecastday &&
+          weather.forecast.forecastday[0]
+        "
+      >
+        <div class="info-block-label">
+          <img src="assets/coldtemp.svg" alt="" />
+          <span>Min</span>
+        </div>
+        <div class="info-block-value">
+          {{
+            weather.forecast.forecastday[0].day.mintemp_c | number : "1.0-0"
+          }}°C
+        </div>
+      </div>
+      <div
+        class="info-block"
+        *ngIf="
+          weather.forecast &&
+          weather.forecast.forecastday &&
+          weather.forecast.forecastday[0]
+        "
+      >
+        <div class="info-block-label">
+          <img src="assets/hottemp.svg" alt="" />
+          <span>Max</span>
+        </div>
+        <div class="info-block-value">
+          {{
+            weather.forecast.forecastday[0].day.maxtemp_c | number : "1.0-0"
+          }}°C
+        </div>
       </div>
     </div>
   </div>

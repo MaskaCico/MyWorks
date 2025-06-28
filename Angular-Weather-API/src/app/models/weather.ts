@@ -1,12 +1,20 @@
 export interface Weather {
-  main: {
-    temp: number;
-    temp_min: number;
-    temp_max: number;
+  location: {
+    name: string;
+    localtime?: string;
+  };
+  current: {
+    temp_c: number;
     humidity: number;
+    wind_kph: number;
+    is_day: number; // 1 = day, 0 = night
   };
-  wind: {
-    speed: number; // km/h
+  forecast?: {
+    forecastday: Array<{
+      day: {
+        maxtemp_c: number;
+        mintemp_c: number;
+      };
+    }>;
   };
-  name: string;
 }
