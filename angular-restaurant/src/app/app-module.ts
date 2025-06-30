@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Header } from './header/header';
 import { Homepage } from './homepage/homepage';
+import { NgxStarsModule } from 'ngx-stars';
 
 @NgModule({
   declarations: [App, Header, Homepage],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, NgxStarsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
