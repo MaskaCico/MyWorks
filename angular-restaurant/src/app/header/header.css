@@ -9,7 +9,7 @@ a {
 }
 
 a:hover {
-  background: blue;
+  background: rgb(100, 21, 21);
   color: white;
 }
 

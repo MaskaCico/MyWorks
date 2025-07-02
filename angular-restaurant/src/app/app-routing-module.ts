@@ -8,6 +8,7 @@ const routes: Routes = [
     component: Homepage,
   },
   { path: 'search/:searchTerm', component: Homepage },
+  { path: 'tag/:tag', component: Homepage },
 ];
 
 @NgModule({

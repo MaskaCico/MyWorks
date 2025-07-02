@@ -8,9 +8,10 @@ import { Homepage } from './homepage/homepage';
 import { NgxStarsModule } from 'ngx-stars';
 import { Search } from './search/search';
 import { FormsModule } from '@angular/forms';
+import { Tags } from './tags/tags';
 
 @NgModule({
-  declarations: [App, Header, Homepage, Search],
+  declarations: [App, Header, Homepage, Search, Tags],
   imports: [BrowserModule, AppRoutingModule, NgxStarsModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
