@@ -1,3 +1,4 @@
+<app-search></app-search>
 <ul>
   <li *ngFor="let food of foods">
     <a>
@@ -7,11 +8,14 @@
           {{ food.name }}
         </div>
         <span class="favourite {{ food.favourite ? '' : 'not' }}">♥</span>
-        <ngx-stars
-          [readonly]="true"
-          [size]="1"
-          [initialStars]="food.stars"
-        ></ngx-stars>
+        <div class="stars">
+          <ngx-stars
+            [readonly]="true"
+            [size]="1"
+            [initialStars]="food.stars"
+          ></ngx-stars>
+        </div>
+
         <div class="product-item-footer">
           <div class="origins">
             <span *ngFor="let origin of food.origins">

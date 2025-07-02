@@ -7,6 +7,7 @@ const routes: Routes = [
     path: '',
     component: Homepage,
   },
+  { path: 'search/:searchTerm', component: Homepage },
 ];
 
 @NgModule({

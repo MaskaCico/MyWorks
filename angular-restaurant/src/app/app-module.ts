@@ -6,10 +6,12 @@ import { App } from './app';
 import { Header } from './header/header';
 import { Homepage } from './homepage/homepage';
 import { NgxStarsModule } from 'ngx-stars';
+import { Search } from './search/search';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [App, Header, Homepage],
-  imports: [BrowserModule, AppRoutingModule, NgxStarsModule],
+  declarations: [App, Header, Homepage, Search],
+  imports: [BrowserModule, AppRoutingModule, NgxStarsModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
