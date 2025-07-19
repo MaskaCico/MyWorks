@@ -11,9 +11,10 @@ import { FormsModule } from '@angular/forms';
 import { Tags } from './tags/tags';
 import { FoodPage } from './food-page/food-page';
 import { CartPage } from './cart-page/cart-page';
+import { NotFound } from './not-found/not-found';
 
 @NgModule({
-  declarations: [App, Header, Homepage, Search, Tags, FoodPage, CartPage],
+  declarations: [App, Header, Homepage, Search, Tags, FoodPage, CartPage, NotFound],
   imports: [BrowserModule, AppRoutingModule, NgxStarsModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
