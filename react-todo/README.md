@@ -1,4 +1,4 @@
-React - To do List
+<h1>React - To do List</h1>
 
 Ez egy egyszerű teendő lista, amely React-ban íródott.
 
