@@ -1,5 +1,5 @@
-<h1>React - To do List</h1>
+<h1>React To Do List</h1>
 
-Ez egy egyszerű teendő lista, amely React-ban íródott.
+Ez egy egyszerű teendő lista, ami React-ban íródott.
 
-This is a simple to-do-ist, coded in React.
+This is a simple To-Do-List, coded in React.
