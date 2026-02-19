@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #2a84ce;
+  --secondary-color: #6185c7;
+  --background-color: #f0f0f0;
+  --text-color: #ffffff;
+  --shadow-dark: rgba(0, 0, 0, 0.2);
+  --shadow-light: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  height: 80vh;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px var(--shadow-dark);
+}
+
+.primary-data {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.primary-data img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.secondary-data {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-info {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--shadow-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.location {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.temperature {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 4em;
+  font-weight: 900;
+}
+
+.details-label {
+  color: var(--text-color);
+}
+
+.details-container {
+  flex: 1;
+  background-color: var(--shadow-light);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info-block {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.info-block-label {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-block-label img {
+  width: 1.5em;
+}
+
+.info-block-label span {
+  color: var(--text-color);
+  font-size: 0.8em;
+}
+
+.info-block-value {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--text-color);
+}
