@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mini Farm Játék</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game">
+      <!-- BAL OLDAL – FÖLD -->
+      <div id="field" class="field"></div>
+
+      <!-- JOBB OLDAL – PANEL -->
+      <div class="sidebar">
+        <div class="tools">
+          <img src="assets/images/hoe.png" data-tool="hoe" class="icon" />
+          <img
+            src="assets/images/watering_can.png"
+            data-tool="water"
+            class="icon"
+          />
+          <img
+            src="assets/images/sickle.png"
+            data-tool="harvest"
+            class="icon"
+          />
+        </div>
+
+        <div class="seeds">
+          <img
+            src="assets/images/seed_potato.png"
+            data-seed="potato"
+            class="icon"
+          />
+          <img
+            src="assets/images/seed_carrot_locked.png"
+            data-seed="carrot"
+            class="icon locked"
+          />
+          <img
+            src="assets/images/seed_lettuce_locked.png"
+            data-seed="lettuce"
+            class="icon locked"
+          />
+          <img
+            src="assets/images/seed_cauliflower_locked.png"
+            data-seed="cauliflower"
+            class="icon locked"
+          />
+        </div>
+
+        <div class="stats">
+          <div class="prices">
+            <p>Eladási ár:</p>
+            <p>Krumpli: 10</p>
+            <p>Répa: 20</p>
+            <p>Saláta: 30</p>
+            <p>Karfiol: 40</p>
+          </div>
+
+          <div class="money">💰: <span id="money">0</span></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

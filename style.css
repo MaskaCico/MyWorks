@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  font-family: sans-serif;
+  background-color: cornsilk;
+}
+
+.game {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* ===== BAL OLDAL – FÖLD ===== */
+
+.field {
+  display: grid;
+  grid-template-columns: repeat(4, 192px);
+  grid-template-rows: repeat(4, 192px);
+  gap: 0px;
+}
+
+.tile {
+  position: relative;
+  width: 192px;
+  height: 192px;
+}
+
+.tile img {
+  position: absolute;
+  width: 192px;
+  height: 192px;
+  image-rendering: pixelated;
+  top: 0;
+  left: 0;
+}
+
+.tile .base {
+  position: relative;
+  z-index: 1;
+}
+
+.tile .overlay {
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 2;
+  width: 100px !important;
+  height: 100px !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+
+.tile.dug .overlay {
+  opacity: 1;
+}
+
+/* ===== JOBB OLDAL – PANEL ===== */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools,
+.seeds {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.stats {
+  margin-top: 10px;
+}
+
+.prices,
+.money {
+  margin-bottom: 15px;
+}
+
+.icon {
+  width: 96px;
+  height: 96px;
+  cursor: pointer;
+  image-rendering: pixelated;
+  border: 3px solid transparent;
+  transition: border 0.2s;
+}
+
+.icon.active {
+  border: 3px solid #ff6b00;
+  box-shadow: 0 0 8px rgba(255, 107, 0, 0.5);
+}
+
+.locked {
+  opacity: 0.4;
+  pointer-events: none;
+}
